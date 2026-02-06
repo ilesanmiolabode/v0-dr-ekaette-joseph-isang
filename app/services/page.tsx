@@ -14,9 +14,9 @@ import {
   TrendingUp,
   Heart,
   Building2,
-  Brain,
+  Lightbulb,
   BarChart3,
-  Cpu,
+  Zap,
   Rocket,
   ArrowRight,
   ChevronDown,
@@ -142,7 +142,7 @@ const services = [
   {
     id: 8,
     title: "AI, Data Science, & Clinical Technology Consulting",
-    icon: Cpu,
+    icon: Zap,
     color: "secondary",
     description: "Clinical validation and implementation support for AI-powered healthcare solutions.",
     items: [
@@ -223,7 +223,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              <Brain className="h-4 w-4" />
+              <Lightbulb className="h-4 w-4" />
               Comprehensive Solutions
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
