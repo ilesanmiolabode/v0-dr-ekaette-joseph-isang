@@ -35,19 +35,19 @@ export function ServicesSection() {
   ]
 
   return (
-    <section className="py-20 lg:py-32 bg-muted/30 relative overflow-hidden">
+    <section className="py-24 lg:py-40 bg-muted/30 relative overflow-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center space-y-4 mb-16 animate-fade-in-up">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground tracking-tight">What I Do</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+        <div className="text-center space-y-6 mb-20 animate-fade-in-up">
+          <h2 className="text-5xl lg:text-6xl font-bold text-foreground tracking-tight">What I Do</h2>
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed lg:leading-8">
             Specialized healthcare strategy and transformation services designed to improve clinical outcomes, reduce
             costs, and enhance operational efficiency.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-20">
           {services.map((service, index) => (
             <Card
               key={index}
@@ -57,27 +57,27 @@ export function ServicesSection() {
                 className={`absolute top-0 left-0 w-full h-2 bg-gradient-to-r ${index === 0 ? "from-primary to-primary/50" : "from-accent to-accent/50"}`}
               />
 
-              <CardHeader className="relative pb-8">
-                <div className="flex items-center gap-4 mb-4">
+              <CardHeader className="relative pb-10">
+                <div className="flex items-center gap-4 mb-6">
                   <div
-                    className={`p-4 rounded-2xl bg-gradient-to-br ${service.gradient} group-hover:scale-110 transition-transform duration-500`}
+                    className={`p-5 rounded-2xl bg-gradient-to-br ${service.gradient} group-hover:scale-110 transition-transform duration-500`}
                   >
-                    <service.icon className={`h-8 w-8 ${service.iconColor}`} />
+                    <service.icon className={`h-9 w-9 ${service.iconColor}`} />
                   </div>
-                  <CardTitle className="text-2xl font-bold">{service.title}</CardTitle>
+                  <CardTitle className="text-3xl font-bold">{service.title}</CardTitle>
                 </div>
-                <CardDescription className="text-lg leading-relaxed">{service.description}</CardDescription>
+                <CardDescription className="text-lg lg:text-xl leading-relaxed lg:leading-8">{service.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-4">
+                <ul className="space-y-5">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-3 group/item">
                       <div
-                        className={`mt-1 p-0.5 rounded-full ${index === 0 ? "bg-primary/10 text-primary" : "bg-accent/10 text-accent"} group-hover/item:scale-110 transition-transform`}
+                        className={`mt-1 p-1 rounded-full ${index === 0 ? "bg-primary/10 text-primary" : "bg-accent/10 text-accent"} group-hover/item:scale-110 transition-transform flex-shrink-0`}
                       >
-                        <Check className="h-3.5 w-3.5" />
+                        <Check className="h-4 w-4" />
                       </div>
-                      <span className="text-muted-foreground group-hover/item:text-foreground transition-colors">
+                      <span className="text-lg text-muted-foreground group-hover/item:text-foreground transition-colors leading-relaxed">
                         {feature}
                       </span>
                     </li>
