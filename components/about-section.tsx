@@ -10,8 +10,8 @@ export function AboutSection() {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10 animate-blob" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-20 lg:gap-24 items-center">
-          <div className="relative group animate-fade-in-up">
+        <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
+          <div className="relative group animate-fade-in-up hidden lg:block">
             <div className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-2xl opacity-20 blur-lg group-hover:opacity-30 transition duration-500" />
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/20">
               <Image
@@ -36,47 +36,47 @@ export function AboutSection() {
           </div>
 
           {/* Right content */}
-          <div className="space-y-10 animate-fade-in-up animate-delay-200">
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-base font-medium">
+          <div className="space-y-8 sm:space-y-10 animate-fade-in-up animate-delay-200">
+            <div className="space-y-4 sm:space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm sm:text-base font-medium">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                 </span>
                 About Me
               </div>
-              <h2 className="text-5xl lg:text-6xl font-bold text-foreground tracking-tight whitespace-nowrap">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-tight">
                 Dr. Ekaette <span className="gradient-text text-chart-3">Joseph-Isang</span>
               </h2>
-              <p className="text-2xl font-medium text-primary/90">
+              <p className="text-lg sm:text-xl lg:text-2xl font-medium text-primary/90">
                 Healthcare Executive
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed lg:leading-8 text-justify">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed lg:leading-8 text-justify">
                 Healthcare executive and strategic advisor with{" "}
                 <span className="font-semibold text-foreground">20+ years</span> of combined experience scaling value-based care, risk adjustment, and population health programs. Expert in aligning clinical strategy, operations, and technology to drive sustainable outcomes, regulatory readiness, and ethical innovation.
               </p>
             </div>
 
-            <div className="space-y-8">
-              <h3 className="text-2xl font-bold text-foreground flex items-center gap-3">
+            <div className="space-y-6 sm:space-y-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground flex items-center gap-3">
                 My Expertise
                 <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
               </h3>
-              <div className="space-y-6">
-                <p className="text-lg text-muted-foreground leading-relaxed lg:leading-8 text-justify">
+              <div className="space-y-5 sm:space-y-6">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed lg:leading-8 text-justify">
                   I provide fractional executive leadership and strategic advisory services focused on healthcare financing, cost management, and regulatory compliance within alternative payment and value-based care models. I help payer, provider, and health technology organizations optimize performance across Medicare Advantage, ACOs, and population health programs by aligning clinical strategy, operations, analytics, and governance to support sustainable financial and quality outcomes.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed lg:leading-8 text-justify">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed lg:leading-8 text-justify">
                   I specialize in audit readiness and compliance management, designing documentation integrity, regulatory governance, and monitoring frameworks that support CMS, RADV, and NCQA requirements. I continuously track and analyze policy and regulatory changes, assess operational and financial impact, and deliver clear reporting and guidance to executive leadership. This proactive approach ensures organizations remain compliant, audit-ready, and strategically positioned as payment models, regulations, and healthcare financing policies continue to evolve.
                 </p>
               </div>
             </div>
 
-            <div className="pt-10">
+            <div className="pt-6 sm:pt-8 lg:pt-10">
               <Link href="/experience">
                 <Button
                   size="lg"
-                  className="bg-primary text-white hover:bg-primary/90 font-bold px-10 py-7 text-lg rounded-full shadow-lg hover:shadow-primary/25 transition-all duration-300 hover:-translate-y-1"
+                  className="bg-primary text-white hover:bg-primary/90 font-bold px-6 sm:px-10 py-5 sm:py-7 text-base sm:text-lg rounded-full shadow-lg hover:shadow-primary/25 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto"
                 >
                   Learn More About My Experience
                   <ArrowRight className="ml-2 h-5 w-5" />

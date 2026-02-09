@@ -46,14 +46,14 @@ export function Footer() {
 
   return (
     <footer className="bg-secondary text-secondary-foreground">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 lg:gap-12">
           {/* Company Info */}
-          <div className="space-y-3">
-            <div className="text-2xl font-semibold whitespace-nowrap">
+          <div className="space-y-4">
+            <div className="text-xl sm:text-2xl font-semibold whitespace-nowrap overflow-hidden">
               Dr.<span className="font-medium text-background"> Ekaette Joseph-Isang</span>
             </div>
-            <div className="space-y-2 text-sm">
+            <div className="space-y-3 text-sm">
               <a
                 href="tel:770-572-1066"
                 className="flex items-center gap-2 text-secondary-foreground/80 hover:text-accent transition-colors"
@@ -73,7 +73,7 @@ export function Footer() {
                 <span>996 E New Circle Rd, Lexington KY 40505</span>
               </div>
             </div>
-            <div className="flex space-x-4 pt-2">
+            <div className="flex space-x-4 pt-3">
               <Link
                 href="https://www.linkedin.com/in/ejisang"
                 target="_blank"
@@ -110,9 +110,9 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <div className="space-y-3">
+          <div className="space-y-4 lg:pl-4">
             <h3 className="text-lg font-semibold">Services</h3>
-            <ul className="space-y-1.5 text-sm">
+            <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/services" className="text-secondary-foreground/80 hover:text-accent transition-colors">
                   All Services
@@ -140,9 +140,9 @@ export function Footer() {
           </div>
 
           {/* Resources */}
-          <div className="space-y-3">
+          <div className="space-y-4">
             <h3 className="text-lg font-semibold">Resources</h3>
-            <ul className="space-y-1.5 text-sm">
+            <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/blog" className="text-secondary-foreground/80 hover:text-accent transition-colors">
                   Blog
@@ -162,9 +162,9 @@ export function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div className="space-y-3">
+          <div className="space-y-4">
             <h3 className="text-lg font-semibold">Stay Connected</h3>
-            <p className="text-secondary-foreground/80 text-sm">Subscribe to receive healthcare strategy insights.</p>
+            <p className="text-secondary-foreground/80 text-sm leading-relaxed">Subscribe to receive healthcare strategy insights.</p>
             {subscribed ? (
               <div className="flex items-center gap-2 text-accent animate-fade-in">
                 <CheckCircle className="h-5 w-5" />
