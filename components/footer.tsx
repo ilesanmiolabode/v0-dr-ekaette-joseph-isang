@@ -50,7 +50,7 @@ export function Footer() {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="text-xl sm:text-2xl font-semibold whitespace-nowrap overflow-hidden">
+            <div className="text-base sm:text-lg font-semibold whitespace-nowrap overflow-hidden">
               Dr.<span className="font-medium text-background"> Ekaette Joseph-Isang</span>
             </div>
             <div className="space-y-3 text-sm">
