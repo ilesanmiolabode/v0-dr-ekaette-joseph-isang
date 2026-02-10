@@ -68,7 +68,7 @@ export function Header() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group">
-              <div className="text-xl sm:text-2xl font-bold text-secondary group-hover:opacity-90 transition-opacity">
+              <div className="text-xl sm:text-2xl font-bold text-secondary group-hover:opacity-90 transition-opacity whitespace-nowrap">
                 Dr. Ekaette <span className="text-chart-3">Joseph-Isang</span>
               </div>
             </Link>

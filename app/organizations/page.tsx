@@ -3,36 +3,38 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Link from "next/link"
 import { CheckCircle, Users, TrendingUp, Shield, Target, Zap } from "lucide-react"
 
-export default function OrganizationsPage() {
+export default function HealthcareStrategyPage() {
   return (
     <div className="min-h-screen bg-background">
-      <section className="bg-gradient-to-r from-primary to-primary/90 text-white py-20">
-        <div className="container mx-auto px-4">
+      <section className="bg-gradient-to-br from-primary via-secondary to-primary text-white py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 -left-4 w-72 h-72 bg-accent/30 rounded-full blur-3xl animate-blob" />
+          <div className="absolute bottom-0 -right-4 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-blob animation-delay-2000" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Healthcare Strategy & Transformation</h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-              Drive meaningful change in your healthcare organization through strategic transformation and operational
-              excellence
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8">Healthcare Strategy & Transformation</h1>
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed lg:leading-8 mb-10">
+              Drive meaningful change in your healthcare organization through strategic transformation and operational excellence. Partner with Dr. Ekaette Joseph-Isang for proven healthcare transformation strategies.
             </p>
-            <Link href="/contact">
-              <Button size="lg" variant="secondary">
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-secondary font-bold px-10 py-7 text-lg">
                 Schedule Consultation
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Why Healthcare Organizations Choose Dr. Ekaette
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Proven expertise in healthcare transformation creates lasting positive change in organizational
-                performance, patient outcomes, and operational efficiency
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed lg:leading-8">
+                Proven expertise in healthcare transformation creates lasting positive change in organizational performance, patient outcomes, and operational efficiency
               </p>
             </div>
 
@@ -75,15 +77,15 @@ export default function OrganizationsPage() {
                     "Track improvements in quality metrics, cost savings, and operational performance with proven methodologies.",
                 },
               ].map((benefit, index) => (
-                <Card key={index} className="border-0 shadow-lg">
+                <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-all duration-300 bg-card/50 backdrop-blur-sm border border-border/50">
                   <CardHeader>
                     <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4">
                       {benefit.icon}
                     </div>
-                    <CardTitle className="text-xl">{benefit.title}</CardTitle>
+                    <CardTitle className="text-xl font-bold text-foreground">{benefit.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-gray-700">{benefit.description}</CardDescription>
+                    <CardDescription className="text-muted-foreground leading-relaxed">{benefit.description}</CardDescription>
                   </CardContent>
                 </Card>
               ))}
@@ -92,164 +94,162 @@ export default function OrganizationsPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Healthcare Transformation Services</h2>
-              <p className="text-lg text-gray-600">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Healthcare Transformation Services</h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed lg:leading-8">
                 Comprehensive solutions tailored to your healthcare organization's unique needs
               </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
-              <Card className="border-0 shadow-lg">
-                <CardHeader className="bg-primary text-white">
-                  <CardTitle className="text-2xl">Strategic Transformation</CardTitle>
-                  <CardDescription className="text-white/90">
+              <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-300 bg-card/50 backdrop-blur-sm border border-border/50">
+                <CardHeader className="bg-gradient-to-r from-primary to-primary/80 text-white border-b-4 border-primary">
+                  <CardTitle className="text-2xl font-bold">Strategic Transformation</CardTitle>
+                  <CardDescription className="text-white/80 leading-relaxed">
                     Comprehensive healthcare strategy and transformation initiatives
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="p-6">
-                  <ul className="space-y-3 mb-6">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Value-based care implementation</span>
+                <CardContent className="p-8">
+                  <ul className="space-y-3 mb-8">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Value-based care implementation</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Medicare population management</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Medicare population management</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Healthcare operations optimization</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Healthcare operations optimization</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Strategic planning and change management</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Strategic planning and change management</span>
                     </li>
                   </ul>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-muted-foreground mb-6 font-medium">
                     <strong>Outcome:</strong> Sustainable cost reductions and improved patient outcomes
                   </p>
-                  <Link href="/contact">
-                    <Button className="w-full">Learn More</Button>
-                  </Link>
+                  <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj" target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full bg-primary hover:bg-primary/90 font-bold py-6 text-base">Learn More</Button>
+                  </a>
                 </CardContent>
               </Card>
 
-              <Card className="border-0 shadow-lg">
-                <CardHeader className="bg-secondary text-white">
-                  <CardTitle className="text-2xl">Clinical Documentation Integrity</CardTitle>
-                  <CardDescription className="text-white/90">Advanced CDI programs and implementation</CardDescription>
+              <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-300 bg-card/50 backdrop-blur-sm border border-border/50">
+                <CardHeader className="bg-gradient-to-r from-secondary to-secondary/80 text-white border-b-4 border-secondary">
+                  <CardTitle className="text-2xl font-bold">Clinical Documentation Integrity</CardTitle>
+                  <CardDescription className="text-white/80 leading-relaxed">Advanced CDI programs and implementation</CardDescription>
                 </CardHeader>
-                <CardContent className="p-6">
-                  <ul className="space-y-3 mb-6">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-secondary mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Centralized CDI program development</span>
+                <CardContent className="p-8">
+                  <ul className="space-y-3 mb-8">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Centralized CDI program development</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-secondary mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Coding accuracy improvement</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Coding accuracy improvement</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-secondary mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Physician engagement strategies</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Physician engagement strategies</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-secondary mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Compliance and quality assurance</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Compliance and quality assurance</span>
                     </li>
                   </ul>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-muted-foreground mb-6 font-medium">
                     <strong>Proven Results:</strong> 40% improvement in coding accuracy
                   </p>
-                  <Link href="/contact">
-                    <Button variant="secondary" className="w-full">
+                  <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj" target="_blank" rel="noopener noreferrer">
+                    <Button variant="secondary" className="w-full font-bold py-6 text-base">
                       Learn More
                     </Button>
-                  </Link>
+                  </a>
                 </CardContent>
               </Card>
 
-              <Card className="border-0 shadow-lg">
-                <CardHeader className="bg-blue-600 text-white">
-                  <CardTitle className="text-2xl">Healthcare Consulting</CardTitle>
-                  <CardDescription className="text-white/90">
+              <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-300 bg-card/50 backdrop-blur-sm border border-border/50">
+                <CardHeader className="bg-gradient-to-r from-accent to-accent/80 text-white border-b-4 border-accent">
+                  <CardTitle className="text-2xl font-bold">Healthcare Consulting</CardTitle>
+                  <CardDescription className="text-white/80 leading-relaxed">
                     Expert guidance for healthcare management challenges
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="p-6">
-                  <ul className="space-y-3 mb-6">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Healthcare management consulting</span>
+                <CardContent className="p-8">
+                  <ul className="space-y-3 mb-8">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Healthcare management consulting</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Risk adjustment optimization</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Risk adjustment optimization</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Health information systems</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Health information systems</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Performance improvement initiatives</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Performance improvement initiatives</span>
                     </li>
                   </ul>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-muted-foreground mb-6 font-medium">
                     <strong>Experience:</strong> 10+ years in healthcare operations
                   </p>
-                  <Link href="/contact">
+                  <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj" target="_blank" rel="noopener noreferrer">
                     <Button
-                      variant="outline"
-                      className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white bg-transparent"
+                      className="w-full border-accent text-white bg-accent hover:bg-accent/90 font-bold py-6 text-base"
                     >
                       Learn More
                     </Button>
-                  </Link>
+                  </a>
                 </CardContent>
               </Card>
 
-              <Card className="border-0 shadow-lg">
-                <CardHeader className="bg-green-600 text-white">
-                  <CardTitle className="text-2xl">Executive Development</CardTitle>
-                  <CardDescription className="text-white/90">
+              <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-300 bg-card/50 backdrop-blur-sm border border-border/50">
+                <CardHeader className="bg-gradient-to-r from-primary/80 to-accent text-white border-b-4 border-primary/80">
+                  <CardTitle className="text-2xl font-bold">Executive Development</CardTitle>
+                  <CardDescription className="text-white/80 leading-relaxed">
                     Leadership coaching and professional development
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="p-6">
-                  <ul className="space-y-3 mb-6">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Executive and career development coaching</span>
+                <CardContent className="p-8">
+                  <ul className="space-y-3 mb-8">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary/80 mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Executive and career development coaching</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Public speaking and corporate training</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary/80 mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Public speaking and corporate training</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Healthcare leadership development</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary/80 mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Healthcare leadership development</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 mr-3 flex-shrink-0" />
-                      <span>Strategic planning facilitation</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary/80 mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">Strategic planning facilitation</span>
                     </li>
                   </ul>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-muted-foreground mb-6 font-medium">
                     <strong>Focus:</strong> Healthcare executive excellence
                   </p>
-                  <Link href="/contact">
+                  <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj" target="_blank" rel="noopener noreferrer">
                     <Button
-                      variant="outline"
-                      className="w-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white bg-transparent"
+                      className="w-full border-primary/80 text-white bg-primary/80 hover:bg-primary font-bold py-6 text-base"
                     >
                       Learn More
                     </Button>
-                  </Link>
+                  </a>
                 </CardContent>
               </Card>
             </div>
@@ -257,34 +257,32 @@ export default function OrganizationsPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">What Healthcare Organizations Say</h2>
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16">What Healthcare Organizations Say</h2>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="border-0 shadow-lg">
+              <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-300 bg-card/50 backdrop-blur-sm border border-border/50">
                 <CardContent className="p-8">
-                  <p className="text-lg text-gray-700 mb-6 italic">
-                    "Dr. Ekaette's strategic transformation initiatives saved our organization $2.3M annually while
-                    improving our clinical documentation accuracy by 40%. Her expertise is unmatched."
+                  <p className="text-lg text-muted-foreground mb-6 italic leading-relaxed">
+                    "Dr. Ekaette's strategic transformation initiatives saved our organization $2.3M annually while improving our clinical documentation accuracy by 40%. Her expertise is unmatched."
                   </p>
                   <div className="text-left">
-                    <p className="font-semibold text-gray-900">Jennifer Martinez</p>
-                    <p className="text-gray-600">Chief Medical Officer, Regional Health System</p>
+                    <p className="font-bold text-foreground">Jennifer Martinez</p>
+                    <p className="text-muted-foreground text-sm">Chief Medical Officer, Regional Health System</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-0 shadow-lg">
+              <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-300 bg-card/50 backdrop-blur-sm border border-border/50">
                 <CardContent className="p-8">
-                  <p className="text-lg text-gray-700 mb-6 italic">
-                    "The CDI program implementation exceeded our expectations. We've seen significant improvements in
-                    coding accuracy and physician engagement across all departments."
+                  <p className="text-lg text-muted-foreground mb-6 italic leading-relaxed">
+                    "The CDI program implementation exceeded our expectations. We've seen significant improvements in coding accuracy and physician engagement across all departments."
                   </p>
                   <div className="text-left">
-                    <p className="font-semibold text-gray-900">Robert Chen</p>
-                    <p className="text-gray-600">VP of Operations, Medicare Advantage Plan</p>
+                    <p className="font-bold text-foreground">Robert Chen</p>
+                    <p className="text-muted-foreground text-sm">VP of Operations, Medicare Advantage Plan</p>
                   </div>
                 </CardContent>
               </Card>
@@ -293,24 +291,26 @@ export default function OrganizationsPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-primary text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Healthcare Organization?</h2>
-          <p className="text-xl mb-8 text-white/90 max-w-3xl mx-auto">
-            Schedule a consultation to learn how Dr. Ekaette's proven strategies can drive meaningful change and improve
-            patient outcomes in your organization
+      <section className="py-24 md:py-32 bg-gradient-to-r from-primary via-secondary to-primary text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 -left-4 w-72 h-72 bg-accent/30 rounded-full blur-3xl animate-blob" />
+          <div className="absolute bottom-0 -right-4 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-blob animation-delay-2000" />
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">Ready to Transform Your Healthcare Organization?</h2>
+          <p className="text-lg md:text-xl mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed lg:leading-8">
+            Schedule a consultation to learn how Dr. Ekaette's proven strategies can drive meaningful change and improve patient outcomes in your organization
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button size="lg" variant="secondary">
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-secondary font-bold px-8 py-6 text-lg">
                 Schedule Consultation
               </Button>
-            </Link>
-            <Link href="/coaching">
+            </a>
+            <Link href="/services">
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary bg-transparent"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary bg-transparent font-bold px-8 py-6 text-lg"
               >
                 View All Services
               </Button>

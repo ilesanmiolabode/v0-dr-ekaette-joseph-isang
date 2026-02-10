@@ -7,31 +7,34 @@ export default function CoachingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-20">
-        <div className="container mx-auto px-4">
+      <section className="bg-gradient-to-br from-primary via-secondary to-primary text-white py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 -left-4 w-72 h-72 bg-accent/30 rounded-full blur-3xl animate-blob" />
+          <div className="absolute bottom-0 -right-4 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-blob animation-delay-2000" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Individual Coaching</h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-              Transform your communication and relationships through personalized trauma-informed coaching
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Executive Coaching</h1>
+            <p className="text-lg md:text-2xl text-white/90 leading-relaxed mb-10 max-w-3xl mx-auto">
+              Transform your career and leadership capabilities through personalized coaching with Dr. Ekaette Joseph-Isang
             </p>
-            <Link href="/contact">
-              <Button size="lg" variant="secondary">
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-secondary font-bold px-8 py-6 text-lg">
                 Book Discovery Call
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Individual Coaching?</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Work one-on-one with certified R.E.M.A.P practitioners to address your unique communication challenges
-                and goals
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Why Choose This Coaching?</h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Work one-on-one with Dr. Ekaette Joseph-Isang to transform your career trajectory and achieve your professional goals
               </p>
             </div>
 
@@ -39,50 +42,50 @@ export default function CoachingPage() {
               {[
                 {
                   icon: <Heart className="w-8 h-8" />,
-                  title: "Personalized Approach",
+                  title: "Executive Focus",
                   description:
-                    "Tailored coaching sessions designed specifically for your unique situation, triggers, and communication patterns.",
+                    "Tailored coaching designed specifically for healthcare leaders, covering strategic decision-making and organizational transformation.",
                 },
                 {
                   icon: <Target className="w-8 h-8" />,
-                  title: "Focused Results",
+                  title: "Proven Strategies",
                   description:
-                    "Work on specific relationship challenges, workplace conflicts, or personal communication goals with targeted strategies.",
+                    "Leverage 20+ years of healthcare executive experience with strategies that drive measurable results and sustainable outcomes.",
                 },
                 {
                   icon: <Users className="w-8 h-8" />,
-                  title: "Safe Environment",
+                  title: "Industry Expertise",
                   description:
-                    "Experience a judgment-free, trauma-informed space where you can explore and heal communication wounds.",
+                    "Gain insights from a leader with deep knowledge in value-based care, operations, and healthcare transformation.",
                 },
                 {
                   icon: <Zap className="w-8 h-8" />,
-                  title: "Rapid Transformation",
+                  title: "Accelerated Growth",
                   description:
-                    "See meaningful changes in your communication patterns and relationships within weeks, not months.",
+                    "Fast-track your career development through focused, intensive coaching sessions addressing your critical challenges.",
                 },
                 {
                   icon: <Clock className="w-8 h-8" />,
                   title: "Flexible Scheduling",
                   description:
-                    "Sessions available at times that work for your schedule, including evenings and weekends.",
+                    "Sessions tailored to your busy executive schedule, including virtual meetings for maximum convenience.",
                 },
                 {
                   icon: <CheckCircle className="w-8 h-8" />,
-                  title: "Proven Methods",
+                  title: "Personal Brand Building",
                   description:
-                    "Benefit from the evidence-based R.E.M.A.P framework combined with personalized coaching techniques.",
+                    "Develop a compelling professional narrative and stand out as a thought leader in healthcare.",
                 },
               ].map((benefit, index) => (
-                <Card key={index} className="border-0 shadow-lg">
+                <Card key={index} className="border-0 shadow-md hover:shadow-xl transition-shadow duration-300 bg-card/50 backdrop-blur-sm border border-border/50">
                   <CardHeader>
-                    <div className="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4">
                       {benefit.icon}
                     </div>
-                    <CardTitle className="text-xl">{benefit.title}</CardTitle>
+                    <CardTitle className="text-lg font-bold">{benefit.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-gray-700">{benefit.description}</CardDescription>
+                    <CardDescription className="text-muted-foreground leading-relaxed">{benefit.description}</CardDescription>
                   </CardContent>
                 </Card>
               ))}
@@ -92,67 +95,67 @@ export default function CoachingPage() {
       </section>
 
       {/* Coaching Areas Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Areas We Address</h2>
-              <p className="text-lg text-gray-600">Common challenges our individual coaching clients work through</p>
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Coaching Focus Areas</h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">Transform your leadership and advance your healthcare career</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
-                  category: "Relationship Communication",
+                  category: "Strategic Leadership",
                   areas: [
-                    "Improving intimate partner communication",
-                    "Navigating difficult family dynamics",
-                    "Building deeper emotional connections",
-                    "Resolving recurring conflicts",
-                    "Healing from relationship trauma",
+                    "Executive presence and influence",
+                    "Strategic planning and execution",
+                    "Organizational transformation",
+                    "Stakeholder management",
+                    "Leadership decision-making",
                   ],
                 },
                 {
-                  category: "Workplace Dynamics",
+                  category: "Healthcare Operations",
                   areas: [
-                    "Managing difficult colleagues or supervisors",
-                    "Assertive communication without aggression",
-                    "Handling workplace conflicts",
-                    "Building professional relationships",
-                    "Leadership communication skills",
+                    "Value-based care optimization",
+                    "Cost management strategies",
+                    "Risk adjustment and compliance",
+                    "Clinical documentation integrity",
+                    "Regulatory and audit readiness",
                   ],
                 },
                 {
-                  category: "Personal Growth",
+                  category: "Career Advancement",
                   areas: [
-                    "Overcoming communication anxiety",
-                    "Building self-confidence in conversations",
-                    "Setting healthy boundaries",
-                    "Expressing needs and emotions clearly",
-                    "Developing emotional intelligence",
+                    "Executive positioning and branding",
+                    "Career trajectory planning",
+                    "Thought leadership development",
+                    "Industry networking strategy",
+                    "Board readiness preparation",
                   ],
                 },
                 {
-                  category: "Trauma Recovery",
+                  category: "Professional Excellence",
                   areas: [
-                    "Healing communication wounds from past trauma",
-                    "Managing triggers in conversations",
-                    "Rebuilding trust in relationships",
-                    "Developing healthy attachment patterns",
-                    "Processing and expressing difficult emotions",
+                    "Performance optimization",
+                    "Work-life integration",
+                    "Personal productivity systems",
+                    "Confidence and executive presence",
+                    "Sustainable success strategies",
                   ],
                 },
               ].map((area, index) => (
-                <Card key={index} className="border-0 shadow-lg">
-                  <CardHeader className="bg-green-50">
-                    <CardTitle className="text-xl text-green-800">{area.category}</CardTitle>
+                <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-all duration-300 bg-card/50 backdrop-blur-sm border border-border/50">
+                  <CardHeader className="bg-primary/5 border-b border-border/50">
+                    <CardTitle className="text-lg font-bold text-primary">{area.category}</CardTitle>
                   </CardHeader>
                   <CardContent className="p-6">
                     <ul className="space-y-3">
                       {area.areas.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-700">{item}</span>
+                        <li key={itemIndex} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-muted-foreground">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -165,15 +168,15 @@ export default function CoachingPage() {
       </section>
 
       {/* Coaching Process Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Coaching Process</h2>
-              <p className="text-lg text-gray-600">A structured approach to lasting transformation</p>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Coaching Journey</h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">A seven-step structured approach designed for sustainable career transformation</p>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6">
               {[
                 {
                   step: "1",
@@ -183,36 +186,48 @@ export default function CoachingPage() {
                 },
                 {
                   step: "2",
-                  title: "Assessment & Goal Setting",
+                  title: "Analysis",
                   description:
-                    "Comprehensive evaluation of your communication patterns, triggers, and relationship dynamics to create a personalized coaching plan.",
+                    "Comprehensive evaluation of your work experience",
                 },
                 {
                   step: "3",
-                  title: "R.E.M.A.P Integration",
+                  title: "Clarity",
                   description:
-                    "Learn and practice the R.E.M.A.P framework tailored to your specific situations and communication challenges.",
+                    "Matching you to best fit roles",
                 },
                 {
                   step: "4",
-                  title: "Skill Development",
+                  title: "Transformation",
                   description:
-                    "Build new communication skills through guided practice, role-playing, and real-world application with ongoing support.",
+                    "Customized training tailored to help you reinvent yourself in 90 days",
                 },
                 {
                   step: "5",
-                  title: "Integration & Mastery",
+                  title: "Integration",
                   description:
-                    "Solidify your new communication patterns and develop strategies for maintaining progress long-term.",
+                    "Bring the results of your analysis, clarity, transformation training into defining a brand new you",
+                },
+                {
+                  step: "6",
+                  title: "Ownership",
+                  description:
+                    "We teach you how to tell your story and stand out from the crowd",
+                },
+                {
+                  step: "7",
+                  title: "Niching",
+                  description:
+                    "Many people stay shallow and at surface level. We show you how to drill down and execute like an expert",
                 },
               ].map((item, index) => (
-                <div key={index} className="flex items-start gap-6">
-                  <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
+                <div key={index} className="flex items-start gap-6 p-6 rounded-lg border border-border/50 bg-card/50 hover:bg-card transition-colors duration-300">
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0 shadow-lg">
                     {item.step}
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                    <p className="text-gray-700 leading-relaxed">{item.description}</p>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-foreground mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -222,191 +237,188 @@ export default function CoachingPage() {
       </section>
 
       {/* Packages Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Coaching Packages</h2>
-              <p className="text-lg text-gray-600">Choose the level of support that's right for you</p>
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Coaching Packages</h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">Choose the level of support that's right for your professional journey</p>
             </div>
 
             <div className="grid lg:grid-cols-3 gap-8">
-              <Card className="border-0 shadow-lg">
-                <CardHeader className="bg-green-100">
-                  <CardTitle className="text-2xl text-green-800">Starter Package</CardTitle>
-                  <CardDescription className="text-green-600">Perfect for focused, short-term goals</CardDescription>
+              <Card className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300 bg-card/50 backdrop-blur-sm">
+                <CardHeader className="bg-primary/5 border-b border-border/50">
+                  <CardTitle className="text-2xl font-bold text-foreground">Starter Package</CardTitle>
+                  <CardDescription className="text-muted-foreground">Perfect for focused, short-term goals</CardDescription>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <div className="text-center mb-6">
-                    <p className="text-3xl font-bold text-green-800 mb-2">$497</p>
-                    <p className="text-gray-600">3 sessions over 6 weeks</p>
+                  <div className="text-center mb-8">
+                    <p className="text-4xl font-bold text-primary mb-2">$497</p>
+                    <p className="text-muted-foreground font-medium">3 sessions over 6 weeks</p>
                   </div>
 
-                  <ul className="space-y-3 mb-6">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>3 x 60-minute coaching sessions</span>
+                  <ul className="space-y-3 mb-8">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">3 x 60-minute coaching sessions</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>Personalized R.E.M.A.P assessment</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Executive assessment</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>Custom action plan</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Custom action plan</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>Email support between sessions</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Email support between sessions</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>Resource library access</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Resource library access</span>
                     </li>
                   </ul>
 
-                  <Link href="/contact">
-                    <Button className="w-full bg-green-600 hover:bg-green-700">Get Started</Button>
-                  </Link>
+                  <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj" target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full bg-primary hover:bg-primary/90 font-bold py-6 text-lg">Get Started</Button>
+                  </a>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-green-500 shadow-lg relative">
+              <Card className="border-2 border-accent shadow-lg hover:shadow-xl transition-all duration-300 relative bg-card/50 backdrop-blur-sm">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-accent text-white px-4 py-1 rounded-full text-sm font-bold">
                     Most Popular
                   </span>
                 </div>
-                <CardHeader className="bg-green-600 text-white">
-                  <CardTitle className="text-2xl">Transformation Package</CardTitle>
+                <CardHeader className="bg-gradient-to-r from-primary to-accent text-white border-b-2 border-accent">
+                  <CardTitle className="text-2xl font-bold">Transformation Package</CardTitle>
                   <CardDescription className="text-white/90">Comprehensive support for lasting change</CardDescription>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <div className="text-center mb-6">
-                    <p className="text-3xl font-bold text-green-800 mb-2">$1,297</p>
-                    <p className="text-gray-600">6 sessions over 3 months</p>
+                  <div className="text-center mb-8">
+                    <p className="text-4xl font-bold text-accent mb-2">$1,297</p>
+                    <p className="text-muted-foreground font-medium">6 sessions over 3 months</p>
                   </div>
 
-                  <ul className="space-y-3 mb-6">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>6 x 60-minute coaching sessions</span>
+                  <ul className="space-y-3 mb-8">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">6 x 60-minute coaching sessions</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>Comprehensive R.E.M.A.P assessment</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Comprehensive executive assessment</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>Personalized transformation roadmap</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Personalized transformation roadmap</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>Unlimited email & text support</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Unlimited email & text support</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>Weekly check-in calls</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Weekly check-in calls</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>Custom worksheets & exercises</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Custom worksheets & exercises</span>
                     </li>
                   </ul>
 
-                  <Link href="/contact">
-                    <Button className="w-full bg-green-600 hover:bg-green-700">Transform Now</Button>
-                  </Link>
+                  <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj" target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full bg-accent hover:bg-accent/90 text-secondary font-bold py-6 text-lg">Transform Now</Button>
+                  </a>
                 </CardContent>
               </Card>
 
-              <Card className="border-0 shadow-lg">
-                <CardHeader className="bg-green-800 text-white">
-                  <CardTitle className="text-2xl">Mastery Package</CardTitle>
-                  <CardDescription className="text-white/90">Deep, intensive work for profound change</CardDescription>
+              <Card className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300 bg-card/50 backdrop-blur-sm">
+                <CardHeader className="bg-secondary text-secondary-foreground border-b border-border/50">
+                  <CardTitle className="text-2xl font-bold">Mastery Package</CardTitle>
+                  <CardDescription className="text-secondary-foreground/70">Deep, intensive work for comprehensive transformation</CardDescription>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <div className="text-center mb-6">
-                    <p className="text-3xl font-bold text-green-800 mb-2">$2,497</p>
-                    <p className="text-gray-600">12 sessions over 6 months</p>
+                  <div className="text-center mb-8">
+                    <p className="text-4xl font-bold text-secondary mb-2">$2,497</p>
+                    <p className="text-muted-foreground font-medium">12 sessions over 6 months</p>
                   </div>
 
-                  <ul className="space-y-3 mb-6">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>12 x 60-minute coaching sessions</span>
+                  <ul className="space-y-3 mb-8">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">12 x 60-minute coaching sessions</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>Deep trauma-informed assessment</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Deep executive assessment</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>Comprehensive mastery program</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Comprehensive mastery program</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>24/7 support access</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Priority support access</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>Monthly progress reviews</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Monthly progress reviews</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span>Bonus: Group coaching access</span>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">Bonus: Private mastermind group</span>
                     </li>
                   </ul>
 
-                  <Link href="/contact">
+                  <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj" target="_blank" rel="noopener noreferrer">
                     <Button
-                      variant="outline"
-                      className="w-full border-green-800 text-green-800 hover:bg-green-800 hover:text-white bg-transparent"
+                      className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold py-6 text-lg"
                     >
-                      Master Communication
+                      Start Mastery Journey
                     </Button>
-                  </Link>
+                  </a>
                 </CardContent>
               </Card>
             </div>
 
-            <div className="mt-12 text-center">
-              <p className="text-gray-600 mb-4">All packages include a 30-day satisfaction guarantee</p>
-              <p className="text-sm text-gray-500">Payment plans available for Transformation and Mastery packages</p>
+            <div className="mt-16 text-center">
+              <p className="text-muted-foreground mb-4 font-medium">All packages include a 30-day satisfaction guarantee</p>
+              <p className="text-sm text-muted-foreground">Payment plans available for Transformation and Mastery packages</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Client Success Stories</h2>
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16">Client Success Stories</h2>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="border-0 shadow-lg">
+              <Card className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300 bg-card/50 backdrop-blur-sm border border-border/50">
                 <CardContent className="p-8">
-                  <p className="text-lg text-gray-700 mb-6 italic">
-                    "Working with my R.E.M.A.P coach completely transformed my marriage. We went from constant arguments
-                    to deep, meaningful conversations. I finally feel heard and understood."
+                  <p className="text-lg text-muted-foreground mb-6 italic leading-relaxed">
+                    "Working with Dr. Ekaette Joseph-Isang has been transformative for my career. Her strategic guidance and industry expertise helped me advance from a director to executive leadership. Highly recommended."
                   </p>
                   <div className="text-left">
-                    <p className="font-semibold text-gray-900">Jennifer M.</p>
-                    <p className="text-gray-600">Marketing Executive</p>
+                    <p className="font-semibold text-foreground">Jennifer M.</p>
+                    <p className="text-muted-foreground text-sm">Healthcare Director</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-0 shadow-lg">
+              <Card className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300 bg-card/50 backdrop-blur-sm border border-border/50">
                 <CardContent className="p-8">
-                  <p className="text-lg text-gray-700 mb-6 italic">
-                    "I used to shut down during conflicts at work. Now I can navigate difficult conversations with
-                    confidence and actually resolve issues instead of avoiding them."
+                  <p className="text-lg text-muted-foreground mb-6 italic leading-relaxed">
+                    "Dr. Ekaette's executive coaching helped me navigate organizational transformation and lead my team through significant change. Her healthcare expertise and leadership insights were invaluable."
                   </p>
                   <div className="text-left">
-                    <p className="font-semibold text-gray-900">David R.</p>
-                    <p className="text-gray-600">Project Manager</p>
+                    <p className="font-semibold text-foreground">David R.</p>
+                    <p className="text-muted-foreground text-sm">Hospital Operations Officer</p>
                   </div>
                 </CardContent>
               </Card>
@@ -416,24 +428,26 @@ export default function CoachingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-green-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Communication?</h2>
-          <p className="text-xl mb-8 text-white/90 max-w-3xl mx-auto">
-            Book a free discovery call to explore how individual coaching can help you build stronger, more meaningful
-            relationships
+      <section className="py-24 md:py-32 bg-gradient-to-r from-primary via-secondary to-primary text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 -left-4 w-72 h-72 bg-accent/30 rounded-full blur-3xl animate-blob" />
+          <div className="absolute bottom-0 -right-4 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-blob animation-delay-2000" />
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">Ready to Advance Your Career?</h2>
+          <p className="text-lg md:text-xl mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed">
+            Book a free 30-minute discovery call with Dr. Ekaette Joseph-Isang to explore how executive coaching can accelerate your professional growth and leadership impact
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button size="lg" variant="secondary">
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-secondary font-bold px-8 py-6 text-lg">
                 Book Discovery Call
               </Button>
-            </Link>
-            <Link href="/assessment">
+            </a>
+            <Link href="/services">
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-green-600 bg-transparent"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary bg-transparent font-bold px-8 py-6 text-lg"
               >
                 Take Assessment First
               </Button>
