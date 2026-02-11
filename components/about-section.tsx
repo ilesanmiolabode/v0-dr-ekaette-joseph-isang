@@ -45,7 +45,7 @@ export function AboutSection() {
                 </span>
                 About Me
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-foreground tracking-tight whitespace-nowrap">
+              <h2 className="text-2xl sm:text-3xl lg:text-3xl font-bold text-foreground tracking-tight whitespace-nowrap">
                 Dr. Ekaette <span className="gradient-text text-chart-3">Joseph-Isang</span>
               </h2>
               <p className="text-xl sm:text-2xl lg:text-2xl font-medium text-primary/90">
