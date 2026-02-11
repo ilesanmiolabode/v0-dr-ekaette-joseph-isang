@@ -97,8 +97,6 @@ export default function AboutPage() {
     { abbr: "MPH", full: "Master of Public Health" },
     { abbr: "CPHQ", full: "Certified Professional in Healthcare Quality" },
     { abbr: "CDIP", full: "Certified Documentation Integrity Practitioner" },
-    { abbr: "CCS", full: "Certified Coding Specialist" },
-    { abbr: "CRC", full: "Certified Risk Adjustment Coder" },
   ]
 
   const highlights = [
