@@ -1,7 +1,8 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { Resend } from "resend"
 
-export const dynamic = "force-dynamic"
+// Note: This API route won't work with static export to GitHub Pages.
+// For a fully static site, use a third-party form service like Formspree or Netlify Forms.
 
 export async function POST(request: NextRequest) {
   try {
