@@ -306,9 +306,9 @@ export default function ServicesPage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
             <Link href="/organizations" className="group">
-              <div className="p-6 rounded-2xl bg-background border-2 hover:border-primary transition-all duration-300 hover:shadow-lg text-center min-w-48">
+              <div className="p-6 rounded-2xl bg-background border-2 hover:border-primary transition-all duration-300 hover:shadow-lg text-center">
                 <Users className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                <h3 className="font-semibold group-hover:text-primary transition-colors text-nowrap">
+                <h3 className="font-semibold text-sm group-hover:text-primary transition-colors text-nowrap">
                   Organizational Solutions
                 </h3>
               </div>
