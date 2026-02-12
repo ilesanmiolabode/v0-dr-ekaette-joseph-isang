@@ -37,26 +37,6 @@ export function AboutSection() {
 
           {/* Right content */}
           <div className="space-y-8 sm:space-y-10 animate-fade-in-up animate-delay-200">
-            <div className="space-y-4 sm:space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-base sm:text-lg font-medium">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                </span>
-                About Me
-              </div>
-              <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-foreground tracking-tight whitespace-nowrap">
-                Dr. Ekaette <span className="gradient-text text-chart-3">Joseph-Isang</span>
-              </h2>
-              <p className="text-xl sm:text-2xl lg:text-2xl font-medium text-primary/90">
-                Healthcare Executive
-              </p>
-              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed lg:leading-8 text-justify">
-                Healthcare executive and strategic advisor with{" "}
-                <span className="font-semibold text-foreground">20+ years</span> of combined experience scaling value-based care, risk adjustment, and population health programs. Expert in aligning clinical strategy, operations, and technology to drive sustainable outcomes, regulatory readiness, and ethical innovation.
-              </p>
-            </div>
-
             <div className="space-y-6 sm:space-y-8">
               <h3 className="text-2xl sm:text-3xl font-bold text-foreground flex items-center gap-3">
                 My Expertise
