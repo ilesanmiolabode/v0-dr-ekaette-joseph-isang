@@ -158,9 +158,9 @@ export default function AboutPage() {
               <Sparkles className="h-4 w-4 text-accent animate-spin-slow" />
               <span className="text-sm font-medium">Healthcare Executive</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up whitespace-nowrap">About Dr. Ekaette Joseph-Isang</h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8 animate-fade-in-up animation-delay-200">
-              Training & Professional Development
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up whitespace-nowrap">About Dr. Ekaette Joseph-Isang</h1>
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed animate-fade-in-up animate-delay-100">
+              Get to know the healthcare visionary transforming organizations across the nation.
             </p>
           </div>
         </div>
@@ -194,10 +194,10 @@ export default function AboutPage() {
               <div
                 className={`transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
               >
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 whitespace-nowrap overflow-x-auto">
                   Dr. Ekaette Joseph-Isang <span className="text-primary">MD, MBA, MPH, CPHQ, CDIP, PAHM</span>
                 </h2>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
                   Dr. Ekaette Joseph-Isang is a distinguished healthcare executive with extensive experience in
                   value-based care transformation, clinical documentation integrity, and healthcare operations. As the
                   CEO of RiteBridge Consulting and Champions Coaching, she brings a unique combination of clinical
